@@ -34,7 +34,7 @@ All programs are started from the repository root with `python -m`.
 
 ### Phrase finder
 
-<!-- ![Phrase finder](docs/phrase_finder.gif) -->
+![Phrase finder](docs/phrase_finder.gif)
 
 A population of random strings evolves until it matches the target phrase
 *"to be or not to be that is the question ok"*. Fitness is the squared share of correct characters;
@@ -47,7 +47,9 @@ python -m evolutionary_computing.phrase_finder.main
 
 ### Smart rockets
 
-<!-- ![Smart rockets](docs/smart_rockets.gif) -->
+![Smart rockets](docs/smart_rockets.gif)
+
+*Generations 0, 15 and 40.*
 
 Each rocket's DNA is a sequence of force vectors, one per frame. After every lifespan the rockets
 are rated by their closest distance to the target, how fast they reached it, and whether they
@@ -62,7 +64,9 @@ python -m evolutionary_computing.smart_rockets.main
 
 ### Interactive selection
 
-<!-- ![Interactive selection](docs/interactive_selection.gif) -->
+![Interactive selection](docs/interactive_selection.gif)
+
+*Picking only red flowers: after five generations the whole population is red.*
 
 There is no fitness function here: you are the fitness function. Every flower is drawn from
 14 genes (colors, petal count and size, stem length). **Hovering** over a flower increases its
@@ -74,7 +78,7 @@ python -m evolutionary_computing.interactive_selection.main
 
 ### Gesture classifier
 
-<!-- ![Gesture classifier](docs/gesture_classifier.gif) -->
+![Gesture classifier](docs/gesture_classifier.gif)
 
 A small neural network (2 → 16 ReLU → 4 softmax) that recognizes swipe directions from the
 drag vector.
@@ -95,7 +99,9 @@ A trained model is included, so step 3 works right away.
 
 ### Flappy Bird neuroevolution
 
-<!-- ![Flappy Bird](docs/flappy_bird.gif) -->
+![Flappy Bird](docs/flappy_bird.gif)
+
+*Generation 203: the best bird passes its 100,000th pipe.*
 
 100 birds, each controlled by its own neural network (5 inputs → 16 ReLU → 2 outputs) written in
 NumPy. The networks are never trained with backpropagation; instead the best birds are selected,

@@ -14,7 +14,6 @@ if __name__ == '__main__':
     generations = np.array([])
     average_fitness = np.array([])
     while (pop.generation < max_generations) and not target_found:
-        current_average_fitness = 0
         best_phrase = ''
 
         for i in range(len(pop.population)):
@@ -22,8 +21,7 @@ if __name__ == '__main__':
                 target_found = True
                 print('Target found')
                 break
-            current_average_fitness += pop.population[i].fitness
-        current_average_fitness /= len(pop.population)
+        current_average_fitness = sum(p.fitness for p in pop.population) / len(pop.population)
         best_phrase = max(pop.population, key=lambda p: p.fitness)
         pop.population = pop.reproduction()
         print('-------------------')
