@@ -1,5 +1,7 @@
 # Evolutionary AI in Python
 
+[![CI](https://github.com/Romanahmad32/evolutionary-ai-python/actions/workflows/ci.yml/badge.svg)](https://github.com/Romanahmad32/evolutionary-ai-python/actions/workflows/ci.yml)
+
 Genetic algorithms, neural networks and neuroevolution in Python, built with **pygame**, **NumPy** and **Keras**.
 
 > **Inspiration:** These projects are inspired by the book
@@ -29,6 +31,8 @@ pip install -r requirements.txt
 ```
 
 All programs are started from the repository root with `python -m`.
+
+Run the tests with `python -m pytest tests` (needs `pytest`).
 
 ## Projects
 
@@ -139,13 +143,16 @@ neuroevolution/
 └── flappy_bird/
     ├── assets/
     └── example_results/
+tests/
 ```
 
 ## Credits
 
 - Inspired by [*The Nature of Code*](https://natureofcode.com/) by [Daniel Shiffman](https://shiffman.net/).
   The whole book can be read for free online.
-<!-- TODO: add the source of the Flappy Bird sprites in neuroevolution/flappy_bird/assets/ -->
+- The sprites in `neuroevolution/flappy_bird/assets/` are based on the original *Flappy Bird* game by
+  Dong Nguyen. They are used here for non-commercial, educational purposes and are not covered by
+  this project's license.
 
 ## License
 

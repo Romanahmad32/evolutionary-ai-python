@@ -1,0 +1,30 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    env:
+      SDL_VIDEODRIVER: dummy
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      # TensorFlow is only needed for the gesture classifier, which the tests don't cover
+      - name: Install dependencies
+        run: pip install pygame numpy pytest ruff
+
+      - name: Lint
+        run: ruff check --select E9,F .
+
+      - name: Test
+        run: python -m pytest tests
